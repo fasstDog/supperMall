@@ -29,6 +29,8 @@
   import {getCategory, getSubcategory, getCategoryDetail} from "network/category";
   import {POP, SELL, NEW} from "@/common/const";
   import {tabControlMixin} from "@/common/mixin";
+  import {debonuce} from '@/common/utils'
+
 
   export default {
 		name: "Category",
@@ -38,7 +40,8 @@
       TabControl,
       Scroll,
       TabContentCategory,
-      TabContentDetail
+      TabContentDetail,
+      getThemeTopY:null,
     },
     mixins: [tabControlMixin],
     data() {
@@ -52,6 +55,7 @@
     created() {
 		  // 1.请求分类数据
       this._getCategory()
+      
     },
     computed: {
 		  showSubcategory() {

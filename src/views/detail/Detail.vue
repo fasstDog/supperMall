@@ -108,7 +108,7 @@ export default {
       this.themeTopYs.push(this.$refs.comment.$el.offsetTop);
       this.themeTopYs.push(this.$refs.recommend.$el.offsetTop);
       this.themeTopYs.push(Number.MAX_VALUE)
-    },100)
+    },1000)
    },
    methods: {
      ...mapActions(['addCart']),
